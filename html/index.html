@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>DOCKER HOME</title>
+    </head>
+    <style>
+        body{
+            background-image: url('2bf5173daf215aa870e856d055733bce.jpeg');
+            background-size: cover; 
+        }
+        #a{
+            
+            top: 0%; 
+            border-radius: 70px 40px; 
+            background-image: url(133276.jpg); 
+            background-size: cover;
+            box-shadow: 5px 5px black;
+            box-shadow: 0 4px 8px 0 rgb(0, 0, 0), 0 6px 20px 0 rgba(0, 0, 0);
+        }
+        #b{
+            position: absolute;
+            top:0;
+            margin-top: 0;
+            left: 600px;
+            padding-top: 10px;
+            font-size: 40px;
+            font-weight: bold;
+            font-family: fantasy;
+            color: rgb(58, 58, 58);
+            text-shadow: 3px 6px black;
+        }
+
+
+
+            #c {
+            border-radius: 50px 50px;
+            width: 200px;
+            height: 200px;
+            text-align: center;
+            }
+
+            .container {
+            padding: 2px 16px;
+            }
+
+            #d{
+                font-family: fantasy;
+                font-weight: bold;
+                font-size: 40px;
+                text-align: center;
+                color: white;
+                text-shadow: 3px 6px rgb(231, 12, 12);
+            }
+
+            #e{
+                
+                margin-left: 540px;
+                color: white;
+                text-shadow: 1px 2px rgb(231, 12, 12);
+                font-family: fantasy;
+                font-size: 25px;
+                border-top: 2px solid rgb(255, 0, 0);
+                border-bottom: 2px solid rgb(255, 0, 0);
+                border-left: 12px solid rgb(27, 26, 26);
+                border-right: 12px solid rgb(27, 26, 26);
+                border-radius: 12px 12px;
+                background-color: rgb(27, 26, 26);
+
+            }
+
+            #e:hover{
+                box-shadow: 0 4px 8px 0 rgb(0, 0, 0), 0 6px 20px 0 rgba(0, 0, 0);
+            }
+            #f{
+                color: white;
+                text-align: center;
+                font-size: 15px;
+                font-family: fantasy;
+                border-radius: 30px;
+                padding: 8px;
+                border-top: 2px solid rgb(255, 0, 0);
+                border-bottom: 2px solid rgb(255, 0, 0);
+                border-left: 12px solid rgb(27, 26, 26);
+                border-right: 12px solid rgb(27, 26, 26);
+                border-radius: 12px 12px;
+                background-color: rgb(27, 26, 26);
+
+            }
+            #f:hover{
+                text-decoration-style: double;
+                text-shadow: 1px 2px rgb(231, 12, 12);
+
+            }
+            #h{
+                text-align:center;
+                border-radius: 15px;
+                overflow: hidden;
+                position: relative;
+                backdrop-filter: blur(5px) saturate(100%) contrast(45%) brightness(130%);
+                margin-left: 200px;
+                margin-right: 200px;
+                font-weight: bold;
+                font-size: 16px;
+            }
+            
+
+    </style>
+    <body>
+
+        <div id=a>
+                <img width=50px src="Docker.ico" >
+                <p id=b>TASK-07 & 39</p>
+    
+        </div>
+
+        <div>
+          
+              <p id=d>Enter Docker Command</p> 
+            </div>
+        <div>
+            <input id=e type="text" />
+        </div>
+        <br>
+        <br>
+        <div style="text-align: center;" >
+        <button id=f type="button" onclick="lw()"> CLICK ME </button>
+        </div>
+        <pre id=h>OUTPUT WILL BE DISPLAYED HERE!!!
+
+        </pre>
+       <script>
+           function lw(){
+               var xhr = new XMLHttpRequest();
+               xhr.open("GET","http://192.168.43.16/cgi-bin/a.py?x="+document.getElementById('e').value,true);
+               xhr.send();
+            xhr.onload=function(){
+                var output= xhr.responseText;
+                document.getElementById("h").innerHTML=output; 
+            };
+
+
+           } 
+       </script> 
+  
+    </body>
+</html>
